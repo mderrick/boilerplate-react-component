@@ -1,0 +1,61 @@
+{
+  "name": "component-boilerplate",
+  "version": "0.0.1",
+  "description": "A React component boilerplate",
+  "main": "dist",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "cd demo && node dev-server.js",
+    "test": "node --harmony_proxies node_modules/.bin/jest",
+    "test:watch": "npm run test -- --watch",
+    "build": "webpack",
+    "build:demo": "cd demo && webpack",
+    "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js"
+  },
+  "keywords": [
+    "react",
+    "boileplate",
+    "component"
+  ],
+  "author": "Matthew Derrick",
+  "license": "MIT",
+  "jest": {
+    "moduleFileExtensions": [
+      "jsx",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$": "<rootDir>/__mocks__/fileMock.js",
+      "^.+\\.css$": "identity-obj-proxy"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(js|jsx)$"
+  },
+  "peerDependencies": {
+    "react": ">=15.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "babel-jest": "^17.0.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "enzyme": "^2.6.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.12.0",
+    "jest": "^17.0.3",
+    "postcss-loader": "^1.1.1",
+    "react-addons-test-utils": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}
