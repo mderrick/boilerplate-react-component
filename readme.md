@@ -2,6 +2,8 @@
 
 # component-boilerplate
 
+You can view a demo [here](https://mderrick.github.io/react-component-boilerplate/);
+
 ## Quick Start
 
 `npm i && cd demo && npm i && cd ../ && npm start`
