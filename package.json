@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "start": "cd demo && node dev-server.js",
+    "install:demo": "cd demo && npm i",
     "test": "node --harmony_proxies node_modules/.bin/jest",
     "test:watch": "npm run test -- --watch",
     "build": "webpack",
