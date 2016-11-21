@@ -11,6 +11,7 @@ module.exports = function(options) {
     var optimize = options.optimize;
     var extractCss = options.extractCss;
     var hot = options.hot;
+    var publicPath = options.publicPath || '/';
 
     var cssString = 'css?modules&importLoaders=1&localIdentName=[hash:base64:5]&-autoprefixer!postcss';
     var config = {
@@ -20,7 +21,7 @@ module.exports = function(options) {
         output: {
             path: distPath,
             filename: '[name].js',
-            publicPath: '/'
+            publicPath: publicPath
         },
         resolve: {
             extensions: ['.js', '.json', '.jsx', '']

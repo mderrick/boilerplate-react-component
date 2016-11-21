@@ -1,5 +1,5 @@
 {
-  "name": "component-boilerplate",
+  "name": "react-component-boilerplate",
   "version": "0.0.1",
   "description": "A React component boilerplate",
   "main": "dist",
@@ -12,7 +12,8 @@
     "test:watch": "npm run test -- --watch",
     "build": "webpack",
     "build:demo": "cd demo && webpack",
-    "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js"
+    "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "react",

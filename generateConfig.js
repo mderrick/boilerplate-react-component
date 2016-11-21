@@ -6,6 +6,7 @@ var srcPath = path.resolve(__dirname, 'src');
 var distPath = path.resolve(__dirname, 'dist');
 
 module.exports = function(options) {
+    options = options || {};
     return {
         entry: [
             path.resolve(srcPath, 'Entry.js')
@@ -39,7 +40,7 @@ module.exports = function(options) {
             }, {
                 test: /\.css$/,
                 include: srcPath,
-                loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:5]&hashPrefix=component-boilerplate&-autoprefixer!postcss')
+                loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:5]&hashPrefix=react-component-boilerplate&-autoprefixer!postcss')
             }]
         },
         plugins: [

@@ -1,0 +1,9 @@
+language: node_js
+deploy:
+  provider: npm
+  email: me@mattderrick.co.uk
+  api_key:
+    secure: AuzrPiUT3uzn5xbGNEQyKp3OZUtleFXM7dHmucoqDt3idfZxbxIaJ1R1Gw5NYMocBFQ3NC3SgbyIxDM9u7tbI4W3qXwYZWgF6nb10PAmPyPbGp+gZAr/X6a++c8BSDyqQINp5iHS10oL6tbWMxmCQsXweGySMyprxW2rccDvXob6eCAK6TK2ZJBfSdanAUh57FxIkSylFFnLt19n0C+qHHdEsLMSfquDgVomDMi/6EEskdeD9vxh9XpEog/UWp8uYdY9D5FslNB9AgDDoHHd3mhei9EhXinGtZiMTMB1RPoCKfDwd+iBuvu8LeTRi81GTXHzqLqBs/IIsM31Cn0CcKxdyktuaRmShtueCx0eJ/qWZ5Rq5ZCGEkMC7dG73FbC7IqLLhF/eOb8PNq1gWjXt8OOXrlJpyc4WCyeF9Z3NARPHCDaJcpmXhHb/ML2NnfPN9AGpMBVq1i50g32q9pFFnlU7w7FruhFMiVIuaStaF/6nxMLcV+alasD5zUiukdktnNGROgvj0yFFCb6dkXyhsVS3kqAdr++arNv1viIGWOxW1Wi+hbLyzc8ySbR/XX0Vngo2VUNGy7rwkwjC9Ui612JF7fbX/k5D9+MYOiqwHDjvQD/a4PILfgOUFJ3bpLUMdijD9eK4s+InoNM89GVY+HjCukAafC3fnUMIPPK6Zg=
+  on:
+    tags: true
+    repo: mderrick/react-component-boilerplate
