@@ -1,4 +1,4 @@
 {
-	extends: './../.babelrc',
+	"extends": "./../.babelrc",
 	"plugins": ["react-hot-loader/babel"]
 }

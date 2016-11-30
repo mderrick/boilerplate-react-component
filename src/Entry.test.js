@@ -5,19 +5,19 @@ import Entry from './Entry';
 import styles from './entry.css';
 
 describe('Entry', () => {
-  let component;
+    let component;
 
-  beforeEach(() => {
-    component = shallow(
+    beforeEach(() => {
+        component = shallow(
       <Entry />
     );
-  });
+    });
 
-  it('contains text', () => {
-    expect(component.text()).toEqual('This is the React component.');
-  });
+    it('contains text', () => {
+        expect(component.text()).toEqual('This is the React component.');
+    });
 
-  it('has a className', () => {
-    expect(component.prop('className')).toEqual(styles.component);
-  });
+    it('has a className', () => {
+        expect(component.prop('className')).toEqual(styles.component);
+    });
 });

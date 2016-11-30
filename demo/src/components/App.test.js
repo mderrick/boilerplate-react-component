@@ -6,21 +6,21 @@ import styles from './App.css';
 import pkg from './../../../package.json';
 
 describe('App', () => {
-  let component;
+    let component;
 
-  beforeEach(() => {
-    component = shallow(
+    beforeEach(() => {
+        component = shallow(
       <App />
     );
-  });
+    });
 
-  it('contains heading text', () => {
-    expect(component.find('h1').text())
+    it('contains heading text', () => {
+        expect(component.find('h1').text())
       .toEqual(`This is a demo for "${pkg.name}".`);
-  });
+    });
 
-  it('has a className', () => {
-    expect(component.prop('className'))
+    it('has a className', () => {
+        expect(component.prop('className'))
       .toEqual(styles.component);
-  });
+    });
 });
