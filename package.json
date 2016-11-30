@@ -13,7 +13,9 @@
     "test:watch": "npm run test -- --watch",
     "build": "webpack",
     "build:demo": "cd demo && webpack",
-    "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js"
+    "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js",
+    "lint": "eslint ./src ./demo/src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [
     "react",
@@ -50,6 +52,8 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
     "enzyme": "^2.6.0",
+    "eslint": "^3.11.1",
+    "eslint-plugin-react": "^6.7.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "gh-pages": "^0.12.0",
     "identity-obj-proxy": "^3.0.0",
