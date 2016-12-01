@@ -1,6 +1,5 @@
 language: node_js
 script:
-    - npm run build
     - npm run install:demo
     - npm run build:demo
     - npm run lint
@@ -13,6 +12,6 @@ deploy:
     skip_cleanup: true
     on:
         tags: true
-        repo: mderrick/react-component-boilerplate
+        repo: mderrick/boilerplate-react-component
 after_deploy:
     - npm run deploy:demo
