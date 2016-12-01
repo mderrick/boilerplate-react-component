@@ -1,7 +1,12 @@
+/* eslint-disable no-console */
+
 const path = require('path');
 const pkg = require('./../package.json');
 const express = require('express');
 const webpack = require('webpack');
+const detect = require('detect-port');
+const chalk = require('chalk');
+const open = require('open');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const generateConfig = require('./generateConfig');
@@ -20,12 +25,28 @@ const compiler = webpack([
         extractCss: false
     })
 ]);
-compiler.compilers[0].watch({}, function(err) {
+const [componentCompiler, demoCompiler] = compiler.compilers;
+
+componentCompiler.watch({}, function(err) {
     if (err) {
         throw err;
     }
 });
-app.use(webpackDevMiddleware(compiler.compilers[1]));
-app.use(webpackHotMiddleware(compiler.compilers[1]));
+app.use(webpackDevMiddleware(demoCompiler));
+app.use(webpackHotMiddleware(demoCompiler));
 
-app.listen(6060);
+const run = (port) => {
+    detect(port, (err, _port) => {
+        if (port === _port) {
+            app.listen(_port, () => {
+                const url = `http://localhost:${port}`;
+                console.log(chalk.cyan(`Server running at ${url}.`));
+                open(url);
+            });
+        } else {
+            run(port + 1);
+        }
+    });
+};
+
+run(6060);
