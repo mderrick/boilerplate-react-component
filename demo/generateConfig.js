@@ -1,20 +1,15 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var pkg = require('./../package.json');
-var srcPath = path.resolve(__dirname, 'src');
-var distPath = path.resolve(__dirname, 'dist');
+const pkg = require('./../package.json');
+const srcPath = path.resolve(__dirname, 'src');
+const distPath = path.resolve(__dirname, 'dist');
 
-module.exports = function(options) {
-    var optimize = options.optimize;
-    var extractCss = options.extractCss;
-    var hot = options.hot;
-    var publicPath = options.publicPath || '/';
-
-    var cssString = 'css?modules&importLoaders=1&localIdentName=[hash:base64:5]&-autoprefixer!postcss';
-    var config = {
+module.exports = ({ optimize, extractCss, hot, publicPath = '/' }) => {
+    const cssString = 'css?modules&importLoaders=1&localIdentName=[hash:base64:5]&-autoprefixer!postcss';
+    let config = {
         entry: [
             path.resolve(srcPath, 'entry.js')
         ],

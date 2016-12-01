@@ -1,3 +1,3 @@
-var generateConfig = require('./generateConfig');
+const generateConfig = require('./generateConfig');
 
 module.exports = generateConfig();

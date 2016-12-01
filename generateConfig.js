@@ -1,12 +1,11 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var pkg = require('./package.json');
-var srcPath = path.resolve(__dirname, 'src');
-var distPath = path.resolve(__dirname, 'dist');
+const pkg = require('./package.json');
+const srcPath = path.resolve(__dirname, 'src');
+const distPath = path.resolve(__dirname, 'dist');
 
-module.exports = function(options) {
-    options = options || {};
+module.exports = (options = {}) => {
     return {
         entry: [
             path.resolve(srcPath, 'Entry.js')
