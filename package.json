@@ -15,9 +15,10 @@
     "build": "webpack",
     "build:demo": "cd demo && webpack",
     "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js",
+    "clearnodemodules": "rm -rf node_modules && rm -rf demo/node_modules",
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
-    "preversion": "npm i && npm run i:demo && npm run lint && npm run test",
+    "preversion": "npm run clearnodemodules && npm i && npm run build && npm run i:demo && npm run build:demo && npm run lint && npm run test",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
