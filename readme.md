@@ -6,10 +6,12 @@ You can view a demo [here](https://mderrick.github.io/react-component-boilerplat
 
 ## Quick Start
 
-`npm i && cd demo && npm i && cd ../ && npm start`
+- `npm i`
+- `npm run i:demo`
+- `npm start`
 
 ## TODO
-- Install demo dependencies as post install
+- Install demo dependencies as post install (https://stackoverflow.com/questions/40898219/how-to-install-nested-npm-packages-with-postinstall-or-single-npm-command)
 - Better build logging and guidances
 	- Auto open browser
 	- Port in use error
