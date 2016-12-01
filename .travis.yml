@@ -1,6 +1,7 @@
 language: node_js
 script:
   - npm run install:demo
+  - cd demo && npm i ../
   - npm run lint
   - npm test
 deploy:
