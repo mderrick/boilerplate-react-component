@@ -2,7 +2,7 @@
 
 # component-boilerplate
 
-You can view a demo [here](https://mderrick.github.io/component-react-boilerplate/);
+You can view a demo [here](https://mderrick.github.io/boilerplate-react-component/);
 
 ## Quick Start
 
