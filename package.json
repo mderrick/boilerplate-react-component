@@ -16,7 +16,9 @@
     "build:demo": "cd demo && webpack",
     "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js",
     "lint": "eslint ./",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "preversion": "npm i && npm run i:demo && npm run lint && npm run test",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "react",
