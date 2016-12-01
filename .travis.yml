@@ -1,7 +1,7 @@
 language: node_js
 script:
   - npm run install:demo
-  - cd demo && npm i ../ && cd ../
+  - cd demo && npm i ../ --save && cd ../
   - npm run lint
   - npm test
 deploy:

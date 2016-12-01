@@ -2,7 +2,6 @@
   "name": "react-component-boilerplate-demo",
   "dependencies": {
     "react": "^15.4.0",
-    "react-component-boilerplate": "file:../",
     "react-dom": "^15.4.0"
   }
 }
