@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './entry.css';
+import styles from './Entry.css';
 
 const Entry = () => (
     <div className={styles.component}>

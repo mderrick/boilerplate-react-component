@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const pkg = require('./../package.json');
 const srcPath = path.resolve(__dirname, 'src');
@@ -49,7 +50,8 @@ module.exports = ({ optimize, extractCss, hot, publicPath = '/' }) => {
         plugins: [
             new HtmlWebpackPlugin({
                 template: path.resolve(srcPath, 'index.html')
-            })
+            }),
+            new CaseSensitivePathsPlugin()
         ]
     };
 

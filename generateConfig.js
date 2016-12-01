@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const pkg = require('./package.json');
 const srcPath = path.resolve(__dirname, 'src');
@@ -43,7 +44,8 @@ module.exports = (options = {}) => {
             }]
         },
         plugins: [
-            new ExtractTextPlugin('styles.css')
+            new ExtractTextPlugin('styles.css'),
+            new CaseSensitivePathsPlugin()
         ]
     };
 };
