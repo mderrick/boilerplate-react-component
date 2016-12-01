@@ -14,10 +14,12 @@ describe('Entry', () => {
     });
 
     it('contains text', () => {
-        expect(component.text()).toEqual('This is the React component.');
+        expect(component.text())
+            .toEqual('This is the React component.');
     });
 
     it('has a className', () => {
-        expect(component.prop('className')).toEqual(styles.component);
+        expect(component.prop('className'))
+            .toEqual(styles.component);
     });
 });

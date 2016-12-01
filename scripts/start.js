@@ -9,7 +9,7 @@ const chalk = require('chalk');
 const open = require('open');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const generateConfig = require('./generateConfig');
+const generateDemoConfig = require('./../demo/generateConfig');
 const generateComponentConfig = require('./../generateConfig');
 
 const app = express();
@@ -17,9 +17,9 @@ const compiler = webpack([
     generateComponentConfig({
         // Build the component library into node_modules
         // so we need not do a symlink for development.
-        outputPath: path.resolve(__dirname, 'node_modules/' + pkg.name + '/dist')
+        outputPath: path.resolve(__dirname, '../demo/node_modules/' + pkg.name + '/dist')
     }),
-    generateConfig({
+    generateDemoConfig({
         hot: true,
         optimize: false,
         extractCss: false

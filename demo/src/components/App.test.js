@@ -16,11 +16,11 @@ describe('App', () => {
 
     it('contains heading text', () => {
         expect(component.find('h1').text())
-      .toEqual(`This is a demo for "${pkg.name}".`);
+            .toEqual(`This is a demo for "${pkg.name}".`);
     });
 
     it('has a className', () => {
         expect(component.prop('className'))
-      .toEqual(styles.component);
+            .toEqual(styles.component);
     });
 });
