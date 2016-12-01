@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "start": "node scripts/start.js",
-    "postinstall": "npm run build",
+    "preinstall:demo": "npm run build",
     "install:demo": "cd demo && npm i",
     "i:demo": "npm run install:demo",
     "test": "jest",
