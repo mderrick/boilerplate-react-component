@@ -8,17 +8,18 @@
   ],
   "scripts": {
     "start": "node scripts/start.js",
+    "postinstall": "npm run build",
     "install:demo": "cd demo && npm i",
     "i:demo": "npm run install:demo",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "build": "webpack",
     "build:demo": "cd demo && webpack",
-    "deploy:demo": "npm run build:demo && node scripts/deploy:demo.js",
-    "clearnodemodules": "rm -rf node_modules && rm -rf demo/node_modules",
+    "deploy:demo": "node scripts/deploy:demo.js",
+    "clean": "rm -rf node_modules && rm -rf dist && rm -rf demo/node_modules && rm -rf demo/dist",
     "lint": "eslint ./",
     "lint:fix": "npm run lint -- --fix",
-    "preversion": "npm run clearnodemodules && npm i && npm run build && npm run i:demo && npm run build:demo && npm run lint && npm run test",
+    "preversion": "npm run clean && npm i && npm run i:demo && npm run lint && npm run test",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
