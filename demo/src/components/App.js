@@ -1,6 +1,6 @@
 import React from 'react';
-import Component from 'react-component-boilerplate';
-import 'react-component-boilerplate/dist/styles.css';
+import Component from 'boilerplate-react-component';
+import 'boilerplate-react-component/dist/styles.css';
 
 import pkg from './../../../package.json';
 import styles from './App.css';

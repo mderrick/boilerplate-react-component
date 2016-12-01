@@ -1,7 +1,7 @@
 {
-  "name": "react-component-boilerplate-demo",
+  "name": "boilerplate-react-component-demo",
   "dependencies": {
-    "react-component-boilerplate": "file:../",
+    "boilerplate-react-component": "file:../",
     "react": "^15.4.0",
     "react-dom": "^15.4.0"
   }
