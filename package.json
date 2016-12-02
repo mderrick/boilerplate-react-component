@@ -27,7 +27,11 @@
     "boileplate",
     "component"
   ],
-  "author": "Matthew Derrick",
+  "author": {
+    "name": "Matt Derrick",
+    "email": "me@mattderrick.co.uk",
+    "url": "http://mattderrick.co.uk"
+  },
   "license": "MIT",
   "jest": {
     "moduleFileExtensions": [
