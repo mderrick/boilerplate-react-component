@@ -3,7 +3,7 @@ import styles from './Entry.css';
 
 const Entry = () => (
     <div className={styles.component}>
-        This is the React component.
+        <p className={styles.p}>This is the React component.</p>
     </div>
 );
 

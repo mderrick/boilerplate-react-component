@@ -1,4 +1,4 @@
-/* eslint-disable global-require */ 
+/* eslint-disable global-require */
 
 import React from 'react';
 import { render } from 'react-dom';
@@ -12,11 +12,8 @@ render(
 if (module.hot) {
     module.hot.accept('./components/App', () => {
         const NextRoot = require('./components/App').default;
-
         render(
-            <App>
-                <NextRoot />
-            </App>,
+            <NextRoot />,
             document.getElementById('content')
         );
     });
