@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-react-component",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A React component boilerplate",
   "main": "dist",
   "files": [
