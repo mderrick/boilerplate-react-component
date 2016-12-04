@@ -8,7 +8,7 @@ import styles from './App.css';
 const App = () => (
     <div className={styles.component}>
         <h1 className={styles.copy}>This is a demo for "{pkg.name}".</h1>
-        <p>This should demonstrate how to use the below component.</p>
+        <p className={styles.copy}>This should demonstrate how to use the below component.</p>
         <Component />
     </div>
 );
