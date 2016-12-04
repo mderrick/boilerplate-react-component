@@ -15,7 +15,7 @@ try {
             console.log(chalk.red('Fields "author.name" and "author.email" are required in your package.json.'));
         } else {
             ghpages.publish(distPath, {
-                repo: `https://${process.env.GITHUB_TOKEN}@$github.com/mderrick/boilerplate-react-component.git`,
+                repo: `https://${process.env.GITHUB_TOKEN}@github.com/mderrick/boilerplate-react-component.git`,
                 user: author.name,
                 email: author.email
             }, (err) => {
