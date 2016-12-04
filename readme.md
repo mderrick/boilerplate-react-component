@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mderrick/react-component-boilerplate.svg?branch=master)](https://travis-ci.org/mderrick/boilerplate-react-component)
+[![Build Status](https://travis-ci.org/mderrick/boilerplate-react-component.svg?branch=master)](https://travis-ci.org/mderrick/boilerplate-react-component)
 
 # boilerplate-react-component
 
