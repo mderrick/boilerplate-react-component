@@ -9,7 +9,7 @@ const distPath = path.join(__dirname, '../demo/dist');
 
 const deploy = (options = {}) => {
     ghpages.publish(distPath, Object.assign({
-        message: `v${pkg.version}`
+        message: pkg.version
     }, options), (err) => {
         if (err) {
             error([err]);
